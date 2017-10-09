@@ -8,17 +8,14 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " 另一种选择, 指定一个vundle安装插件的路径
 "call vundle#begin('~/some/path/here')
-
-" 让vundle管理插件版本,必须
 Plugin 'VundleVim/Vundle.vim'
-
 " 以下范例用来支持不同格式的插件安装.
 " 请将安装插件的命令放在vundle#begin和vundle#end之间.
 " Github上的插件
 " 格式为 Plugin '用户名/插件仓库名'
 "Plugin 'tpope/vim-fugitive'
 " 来自 http://vim-scripts.org/vim/scripts.html 的插件
-" Plugin '插件名称' 实际上是 Plugin 'vim-scripts/插件仓库名' 只是此处的用户名可以省略
+" Plugin '插件名称' 默认来自 'vim-scripts'
 "Plugin 'L9'
 " 由Git支持但不再github上的插件仓库 Plugin 'git clone 后面的地址'
 "Plugin 'git://git.wincent.com/command-t.git'
@@ -29,8 +26,6 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " 安装L9，如果已经安装过这个插件，可利用以下格式避免命名冲突
 "Plugin 'ascenator/L9', {'name': 'newL9'}
-
-" 你的所有插件需要在下面这行之前
 " You Complete Me 自动补全
 "Plugin 'Valloric/YouCompleteMe'
 "树形目录
@@ -44,6 +39,10 @@ Plugin 'taglist.vim'
 "Plugin 'tpope/vim-fugitive'
 "配色
 Plugin 'altercation/vim-colors-solarized'
+"Plugin 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
+"latex 预览
+Plugin 'xuhdev/vim-latex-live-preview'
+Plugin 'vim-latex/vim-latex'
 call vundle#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
 "Vundle End
@@ -62,7 +61,7 @@ colorscheme solarized
 syntax on 
 "vim使用自动对齐，也就是把当前行的对起格式应用到下一行；
 set autoindent
-"依据上面的对起格式，智能的选择对起方式，对于类似C语言编
+"依据上面的对起格式，智能的选择对齐方式
 set smartindent
 "设置tab键为4个空格
 set tabstop=4
@@ -81,7 +80,7 @@ set nohls
 "即时查看搜索匹配结果
 set incsearch
 "忽略大小写查找
-"set ignorecase
+set ignorecase
 "将Tab展开成空格
 "set expandtab
 "仅在Python文件中将Tab展开成空格"
