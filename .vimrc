@@ -41,8 +41,8 @@ Plugin 'taglist.vim'
 Plugin 'altercation/vim-colors-solarized'
 "Plugin 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 "latex 预览
-Plugin 'xuhdev/vim-latex-live-preview'
-Plugin 'vim-latex/vim-latex'
+"Plugin 'xuhdev/vim-latex-live-preview'
+"Plugin 'vim-latex/vim-latex'
 call vundle#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
 "Vundle End
