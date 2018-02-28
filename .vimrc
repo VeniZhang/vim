@@ -87,6 +87,8 @@ set ignorecase
 autocmd FileType python set expandtab
 "在屏幕右下角显示正在输入的命令
 set showcmd
+"启用缩进折叠
+set foldmethod=indent
 "修改一个文件后，自动进行备份，备份的文件名为原文件名加“~“后缀
 if has("vms") 
     set nobackup
