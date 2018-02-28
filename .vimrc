@@ -89,6 +89,10 @@ autocmd FileType python set expandtab
 set showcmd
 "启用缩进折叠
 set foldmethod=indent
+"高亮光标所在列
+set cursorcolumn
+"高亮光标所在行
+set cursorline
 "修改一个文件后，自动进行备份，备份的文件名为原文件名加“~“后缀
 if has("vms") 
     set nobackup
