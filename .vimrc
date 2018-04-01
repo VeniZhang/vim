@@ -42,8 +42,8 @@ Plugin 'taglist.vim'
 Plugin 'altercation/vim-colors-solarized'
 "Plugin 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 "latex 预览
-Plugin 'xuhdev/vim-latex-live-preview'
-Plugin 'vim-latex/vim-latex'
+"Plugin 'xuhdev/vim-latex-live-preview'
+"Plugin 'vim-latex/vim-latex'
 "markdown 语法高亮
 "Plugin 'godlygeek/tabular'
 "Plugin 'plasticboy/vim-markdown'
@@ -97,6 +97,12 @@ set showcmd
 set spell 
 "修复macOS，删除键无法向前删除问题
 set backspace=indent,eol,start
+"启用缩进折叠
+set foldmethod=indent
+"高亮光标所在列
+set cursorcolumn
+"高亮光标所在行
+set cursorline
 "修改一个文件后，自动进行备份，备份的文件名为原文件名加“~“后缀
 if has("vms") 
     set nobackup
