@@ -2,6 +2,7 @@
 "防止进入vi兼容模式
 set nocompatible              " 去除VI一致性,必须
 filetype off                  " 必须
+"set encoding=utf-8 "mac 英文系统下，终端中文乱码
 
 " 设置包括vundle和初始化相关的runtime path
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -27,7 +28,7 @@ Plugin 'VundleVim/Vundle.vim'
 " 安装L9，如果已经安装过这个插件，可利用以下格式避免命名冲突
 "Plugin 'ascenator/L9', {'name': 'newL9'}
 " You Complete Me 自动补全
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 "树形目录
 "Plugin 'nerdtree'
 Plugin 'scrooloose/nerdtree'
@@ -43,6 +44,11 @@ Plugin 'altercation/vim-colors-solarized'
 "latex 预览
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'vim-latex/vim-latex'
+"markdown 语法高亮
+"Plugin 'godlygeek/tabular'
+"Plugin 'plasticboy/vim-markdown'
+"插件 ale，异步语法检查
+Plugin 'w0rp/ale'
 call vundle#end()            " 必须
 filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
 "Vundle End
@@ -87,6 +93,10 @@ set ignorecase
 autocmd FileType python set expandtab
 "在屏幕右下角显示正在输入的命令
 set showcmd
+"开启拼写检查
+set spell 
+"修复macOS，删除键无法向前删除问题
+set backspace=indent,eol,start
 "修改一个文件后，自动进行备份，备份的文件名为原文件名加“~“后缀
 if has("vms") 
     set nobackup
@@ -106,3 +116,14 @@ let Tlist_Use_Right_Window =1
 let Tlist_WinHeight = 100
 let Tlist_WinWidth = 25
 "tagList 配置 end
+"latex start 
+"autocmd Filetype tex setl updatetime=1
+"let g:livepreview_previewer = 'open -a Preview'
+let g:livepreview_previewer = 'open -a Skim'
+"latex end
+"
+"YCM
+let g:ycm_server_python_interpreter='/usr/bin/python'
+let g:ycm_python_binary_path = 'python3'
+let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+"YCM end
