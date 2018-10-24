@@ -3,7 +3,7 @@
 set nocompatible              " 去除VI一致性,必须
 filetype off                  " 必须
 "set encoding=utf-8 "mac 英文系统下，终端中文乱码
-
+set t_Co=256 " tmux 下色彩有问题
 " 设置包括vundle和初始化相关的runtime path
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -131,5 +131,6 @@ let g:livepreview_previewer = 'open -a Skim'
 "YCM
 let g:ycm_server_python_interpreter='/usr/bin/python'
 let g:ycm_python_binary_path = 'python3'
-let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+"let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
 "YCM end
